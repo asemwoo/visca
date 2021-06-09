@@ -1,13 +1,13 @@
-package bank.service;
+package service;
 
-import bank.dao.BankDao; 
-import bank.vo.Account;
+import dao.Dao;
+import vo.Account;
  
 public class Service {
 	private static Service service = new Service();
-	private Service() {}  //¿ÜºÎÁ¢±Ù
-	private BankDao dao = BankDao.getInstance(); //³»ºÎ°´Ã¼ dao
-	public static Service getInstance() //³»ºÎ°´Ã¼°¡ ¹ÝÈ¯µÇµµ·Ï ÇÏ°ÔÇÏ´Â ¸Þ¼Òµå
+	private Service() {}  //ï¿½Üºï¿½ï¿½ï¿½ï¿½ï¿½
+	private Dao dao = Dao.getInstance(); //ï¿½ï¿½ï¿½Î°ï¿½Ã¼ dao
+	public static Service getInstance() //ï¿½ï¿½ï¿½Î°ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Çµï¿½ï¿½ï¿½ ï¿½Ï°ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½
 	{
 		return service;
 	} 

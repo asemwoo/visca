@@ -1,4 +1,4 @@
-package visca.controller;
+package controller;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;

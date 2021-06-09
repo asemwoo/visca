@@ -1,4 +1,4 @@
-package visca.controller;
+package controller;
 
 import java.io.IOException;  
 
@@ -6,7 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bank.service.Service;
+import service.Service;
 
 public class WithdrawalController implements Controller {
 

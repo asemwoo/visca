@@ -1,4 +1,4 @@
-package visca.controller;
+package controller;
 
 import java.io.IOException;  
 
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import bank.service.Service;
+import service.Service;
 
 public class DepositController implements Controller{
 	@Override

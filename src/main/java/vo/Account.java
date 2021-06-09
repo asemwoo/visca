@@ -1,4 +1,4 @@
-package bank.vo;
+package vo;
 
 public class Account {
 	private String id;

@@ -1,11 +1,11 @@
-package visca.dao;
+package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import bank.vo.Account;
+import vo.Account;
 
 public class Dao {
 	private static Dao dao = new Dao();

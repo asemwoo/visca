@@ -1,4 +1,4 @@
-package bank.controller;
+package controller;
 
 import java.io.IOException; 
 
@@ -6,8 +6,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bank.service.Service;
-import bank.vo.Account;
+import service.Service;
+import vo.Account;
 
 public class JoinController implements Controller {
 	@Override
@@ -16,8 +16,8 @@ public class JoinController implements Controller {
 	String pwd = request.getParameter("pwd");
 	Account account = new Account(id,pwd);
 	
-	Service s = Service.getInstance();//³»ºÎ°´Ã¼
-	s.join(account);//Á¶ÀÎ¸Þ¼Òµå È£Ãâ
+	Service s = Service.getInstance();//ï¿½ï¿½ï¿½Î°ï¿½Ã¼
+	s.join(account);//ï¿½ï¿½ï¿½Î¸Þ¼Òµï¿½ È£ï¿½ï¿½
 	
 	HttpUtil.forward(request, response, "/index.jsp");
 	}
