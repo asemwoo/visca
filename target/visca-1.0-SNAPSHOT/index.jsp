@@ -7,8 +7,8 @@
 </head>
 <body>
 
-<a href="login.jsp">Login</a><br>
-<a href="join.jsp">Join</a>
+<a href="main.html">WELCOME</a><br>
+        <% //TODO Jquery 적용해서 크게 만들기 -엠블럼 중앙에 두고 클릭하면 메인으로 넘어가게 %>
 
 </body>
 </html>

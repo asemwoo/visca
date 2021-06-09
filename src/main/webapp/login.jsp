@@ -53,7 +53,7 @@
 						width: 100%; height: 44px; border: 0; color: white; background-color:#D3C64A;
 		}
 		.header{
-			background-image: url("/img/barcablack.png");
+			background-image: url("img/barcablack.png");
 			background-size: cover; 
 			height: 300px; 
 			background-position: center;
@@ -115,7 +115,7 @@
 </head>
 <body>
 	<header class="head-main">
-		<a href="main.html"><img src="/img/mainblack.jpg"></a>
+		<a href="main.html"><img src="img/mainblack.jpg"></a>
 		<div>
 			<a href="login.html"><button class="head-login">로그인</button></a>
 			<a href="join.html"><button class="head-join">회원가입</button></a>
