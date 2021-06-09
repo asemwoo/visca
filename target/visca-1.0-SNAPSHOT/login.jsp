@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<title>로그인 창</title>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<style>
@@ -115,10 +115,10 @@
 </head>
 <body>
 	<header class="head-main">
-		<a href="main.html"><img src="img/mainblack.jpg"></a>
+		<a href="main.jsp"><img src="img/mainblack.jpg"></a>
 		<div>
-			<a href="login.html"><button class="head-login">로그인</button></a>
-			<a href="join.html"><button class="head-join">회원가입</button></a>
+			<a href="login.jsp"><button class="head-login">로그인</button></a>
+			<a href="join.jsp"><button class="head-join">회원가입</button></a>
 		</div>
 	</header>
 	<nav class="navi">	

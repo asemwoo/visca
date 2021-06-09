@@ -8,5 +8,5 @@ import javax.servlet.http.HttpServletResponse;
 
 public interface Controller   {
 	public void execute(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException; 
+			throws ServletException, IOException;
 }

@@ -120,10 +120,10 @@
 
 <body>
 	<header class="head">
-		<a href="main.html"><img src="img/mainblack.jpg"></a>
+		<a href="main.jsp"><img src="img/mainblack.jpg"></a>
 		<div>
-			<a href="login.html"><button class="head-login">로그인</button></a>
-			<a href="join.html"><button class="head-join">회원가입</button></a>
+			<a href="login.jsp"><button class="head-login">로그인</button></a>
+			<a href="join.jsp"><button class="head-join">회원가입</button></a>
 		</div>
 	</header>
 	<nav class="navi">	

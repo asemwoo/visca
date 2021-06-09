@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -88,12 +90,12 @@
         </table>
     </form>
     <div>
-        <a href="bbs.do">
+        <a href="board.jsp">
             <button>게시판</button>
         </a>
     </div>
     <div>
-        <a href="main.html">
+        <a href="main.jsp">
             <button>홈으로</button>
         </a>
     </div>
