@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%request.setCharacterEncoding("UTF-8");%>
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
@@ -71,6 +72,7 @@
 		}
 		.head-main{
 			padding: 10px 0px;
+			text-align: center;
 			display: flex;
 			justify-content: space-between;
 		}

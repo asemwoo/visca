@@ -25,8 +25,7 @@ public class FrontController extends HttpServlet{
 		} 
 		@Override
 		protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-			
-		// TODO Auto-generated method stub
+
 		String uri = req.getRequestURI(); 
 		String contextPath = req.getContextPath();
 		String path = uri.substring(contextPath.length());

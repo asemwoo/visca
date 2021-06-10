@@ -5,9 +5,9 @@ import vo.Account;
  
 public class Service {
 	private static Service service = new Service();
-	private Service() {}  //�ܺ�����
-	private Dao dao = Dao.getInstance(); //���ΰ�ü dao
-	public static Service getInstance() //���ΰ�ü�� ��ȯ�ǵ��� �ϰ��ϴ� �޼ҵ�
+	private Service() {}  //외부접근
+	private Dao dao = Dao.getInstance(); //내부객체
+	public static Service getInstance() //내부객체가 반환되게하는 메소드
 	{
 		return service;
 	} 

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%request.setCharacterEncoding("UTF-8");%>
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
@@ -23,9 +24,7 @@
 			margin-left: 200px;
 			margin-top: 200px;
 			margin-right: 200px;
-
 		}
-
 		li.menu{
 			float: left; margin-right: 20px;
 		}
@@ -59,7 +58,7 @@
 		}
 		.header{
 			background-image: url("img/heart.png");
-			background-size: cover; 
+			background-size: cover;
 			height: 300px; 
 			background-position: center;
 			padding-left: 20%;
@@ -77,13 +76,17 @@
 		}
 		.head{
 			padding: 10px 0px;
+			text-align: center;
 			display: flex;
+			background-size: cover;
 			justify-content: space-between;
+			margin-right: 0px;
 		}
 		.head-login{
 			height: 32px; 
 			padding: 0 10px; 
-			width: 80px; 
+			width: 80px;
+			margin-right: 0px;
 			border: 1px solid #000;
 			background-color: #B70000;
 			border-radius: 6px;
@@ -157,20 +160,20 @@
 	<section class="mt-200">
 		<div class="join-form">
 			<h1>회원가입</h1>
-			<form>
+			<form action="jdbc:mysql://localhost:8080/barca?serverTimezone=UTC" method="post">
 				<fieldset class="fieldset1">
 					<ul>
 						<li class="join">
-							<input class="input" type="text" name="joinid" placeholder="  아이디를 입력하세요">
+							<input class="input" type="text" name="id" placeholder="  아이디를 입력하세요">
 						</li>
 						<li class="join">
-							<input class="input" type="password" name="joinpwd" placeholder="  비밀번호를 입력하세요">
+							<input class="input" type="password" name="pwd" placeholder="  비밀번호를 입력하세요">
 						</li>
 						<li class="join">
-							 <input class="input" type="password" name="joinpwd" placeholder="  비밀번호를 재입력하세요">
+							 <input class="input" type="password" name="pwd" placeholder="  비밀번호를 재입력하세요">
 						</li>
 						<li class="join">
-							<input class="input" type="text" name="joinname" placeholder="  이름을 입력하세요">
+							<input class="input" type="text" name="name" placeholder="  이름을 입력하세요">
 						</li>
 						<li class="join">
 							<input class="input" type="text" name="mail" placeholder="  이메일을 입력하세요">
@@ -191,7 +194,7 @@
 								<span>가입</span>
 							</button>
 						<li>
-							<a href="login.html">
+							<a href="login.jsp">
 								<button type="button" class="button-right">
 									<span>취소</span>
 								</button>

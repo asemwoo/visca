@@ -14,12 +14,17 @@ public class JoinController implements Controller {
 	public void  execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 	String id = request.getParameter("id");
 	String pwd = request.getParameter("pwd");
-	Account account = new Account(id,pwd);
+	String name = request.getParameter("name");
+	String mail = request.getParameter("mail");
+	String phone = request.getParameter("phone");
+	String birth = request.getParameter("birth");
+
+	Account account = new Account(id,pwd,name,mail,phone,birth);
 	
-	Service s = Service.getInstance();//���ΰ�ü
-	s.join(account);//���θ޼ҵ� ȣ��
+	Service s = Service.getInstance();
+	s.join(account);
 	
-	HttpUtil.forward(request, response, "/index.jsp");
+	HttpUtil.forward(request, response, "/main.jsp");
 	}
 	
 }

@@ -16,7 +16,7 @@
         }
         #wriTitle{
             text-align: center;
-            background-color: rgb(100, 100, 100);
+            background-color: black;
             width: 800px;
             height: 20px;
             padding: 12px 0;

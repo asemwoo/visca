@@ -57,17 +57,18 @@
             font-size: 18px; color: #4ABFD3;
             text-shadow: 2px 2px black;
         }
-        .head-main{
+        .head-main {
             padding: 10px 0px;
-             width: 80%;
-            cursor: pointer;
-            justify-content: space-between;
             text-align: center;
+            display: flex;
+            background-size: cover;
+            justify-content: space-between;
+            margin-right: 0px;
         }
         .head-login{
             height: 32px;
             padding: 0 10px;
-            display: flex;
+            margin-right: 0px;
             border: 1px solid #000;
             background-color: #B70000;
             border-radius: 6px;
@@ -77,7 +78,6 @@
         .head-join{
             height: 32px;
             padding: 0 10px;
-            display: flex;
             border: 1px solid #000;
             border-radius: 6px;
             background-color: #0000C9;

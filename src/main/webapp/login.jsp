@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%request.setCharacterEncoding("UTF-8");%>
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
@@ -71,6 +72,7 @@
 		}
 		.head-main{
 			padding: 10px 0px;
+			text-align: center;
 			display: flex;
 			justify-content: space-between;
 		}
@@ -115,7 +117,7 @@
 </head>
 <body>
 	<header class="head-main">
-		<a href="main.jsp"><img src="img/mainblack.jpg"></a>
+		<a href="/"><img src="img/mainblack.jpg"></a>
 		<div>
 			<a href="login.jsp"><button class="head-login">로그인</button></a>
 			<a href="join.jsp"><button class="head-join">회원가입</button></a>
@@ -152,7 +154,7 @@
 	<section class="mt-200">
 		<div class="login-form">
 			<h1>로그인</h1>
-		<form method="post" >
+		<form action="/login.do" method="post" >
 			<fieldset class="fieldset-noline">
 				<ul class="inform">
 					<li>
@@ -173,7 +175,7 @@
 						<span>로그인</span>
 					</button>
 					<br>
-					<a href="join.html">
+					<a href="join.jsp">
 						<button type="button" class="joinbutton">
 							<span>회원 가입</span>
 						</button>

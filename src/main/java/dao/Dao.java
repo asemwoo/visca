@@ -18,7 +18,7 @@ public class Dao {
 		try
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn= DriverManager.getConnection("jdbc:mysql://localhost:8081/db","root","1234");
+			conn= DriverManager.getConnection("jdbc:mysql://localhost:8080/barca?serverTimezone=UTC","root","1234");
 		}catch(Exception e) {
 			System.out.println("MDAO:connect" +e);
 		}
@@ -60,11 +60,15 @@ public class Dao {
 		try
 		{
 			conn = connect();
-			pstmt = conn.prepareStatement("insert into account values(?,?,?);");
+			pstmt.executeUpdate();
+			pstmt = conn.prepareStatement("insert into account values(?,?,?,?,?,?);");
 			pstmt.setString(1, account.getId());
 			pstmt.setString(2, account.getPwd());
-			pstmt.setString(3, account.getMoney()+"");
-			pstmt.executeUpdate();
+			pstmt.setString(3, account.getName());
+			pstmt.setString(4, account.getMail());
+			pstmt.setString(5, account.getPhone());
+			pstmt.setString(6, account.getBirth());
+
 		}catch(Exception e)
 		{
 			System.out.print("join error" +e);

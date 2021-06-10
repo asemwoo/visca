@@ -30,6 +30,6 @@ public class LoginController implements Controller{
 		{ 
 			path="/index.jsp";   	//�������� ��
 		}
-		HttpUtil.forward(request, response, path);
+		HttpUtil.forward(request, response,"/main.jsp");
 	}
 }
