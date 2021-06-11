@@ -24,7 +24,7 @@ public class Account {
 	}
 	public void setId(String tId)
 	{
-		this.id= tId;
+		this.id= id;
 	}
 	public String getPwd()
 	{
@@ -32,7 +32,7 @@ public class Account {
 	}
 	public void setPwd(String tPwd)
 	{
-		this.pwd= tPwd;
+		this.pwd= pwd;
 	}
 	public String getName()
 	{
@@ -40,7 +40,7 @@ public class Account {
 	}
 	public void setName(String tName)
 	{
-		this.name= tName;
+		this.name= name;
 	}
 	public String getMail()
 	{
@@ -48,7 +48,7 @@ public class Account {
 	}
 	public void setMail(String tMail)
 	{
-		this.mail= tMail;
+		this.mail= mail;
 	}
 	public String getPhone()
 	{
@@ -56,7 +56,7 @@ public class Account {
 	}
 	public void setPhone(String tPhone)
 	{
-		this.phone= tPhone;
+		this.phone= phone;
 	}
 	public String getBirth()
 	{
@@ -64,7 +64,7 @@ public class Account {
 	}
 	public void setBirth(String tBirth)
 	{
-		this.birth= tBirth;
+		this.birth= birth;
 	}
 	public	int getMoney()
 	{
@@ -72,6 +72,6 @@ public class Account {
 	}
 	public void setMoney(int tMoney)
 	{
-		this.money= tMoney;
+		this.money= money;
 	}
 }

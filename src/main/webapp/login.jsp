@@ -154,7 +154,7 @@
 	<section class="mt-200">
 		<div class="login-form">
 			<h1>로그인</h1>
-		<form action="/login.do" method="post" >
+		<form action="login.do" method="post" >
 			<fieldset class="fieldset-noline">
 				<ul class="inform">
 					<li>

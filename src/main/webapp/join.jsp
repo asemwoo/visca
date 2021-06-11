@@ -160,7 +160,7 @@
 	<section class="mt-200">
 		<div class="join-form">
 			<h1>회원가입</h1>
-			<form action="/join.do" method="post">
+			<form action="join.do" method="post">
 				<fieldset class="fieldset1">
 					<ul>
 						<li class="join">
@@ -170,7 +170,7 @@
 							<input class="input" type="password" name="pwd" placeholder="  비밀번호를 입력하세요">
 						</li>
 						<li class="join">
-							 <input class="input" type="password" name="pwd" placeholder="  비밀번호를 재입력하세요">
+							 <input class="input" type="password" name="pwd-check" placeholder="  비밀번호를 재입력하세요">
 						</li>
 						<li class="join">
 							<input class="input" type="text" name="name" placeholder="  이름을 입력하세요">

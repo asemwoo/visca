@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException; 
 import java.util.HashMap;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,8 +18,8 @@ public class FrontController extends HttpServlet{
 			map.put("/join.do",new JoinController());
 			map.put("/login.do",new LoginController());
 			map.put("/deposit.do", new DepositController());
-			map.put("/withdrawal.do",new WithdrawalController());
-			map.put("/query.do",new QueryController());
+			map.put("/write.do", new BoardController());
+			map.put("/bbs.do",new BbsController());
 			map.put("/search.do", new SearchController());
 			map.put("/transfer.do", new TransferController());
 			

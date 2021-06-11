@@ -13,12 +13,12 @@
     </style>
 </head>
 <body>
-<a href="main.html">WELCOME</a><br>
+<a href="main.jsp">WELCOME</a><br>
 <header class="icon">
     <div>
-        <a href="main.html">
+        <a href="main.jsp">
             <img src="../../img/first.png" width="50%">
-            <% //todo 이거 써 놓은거 어디갔냐 암튼 이거 중앙으로하고 크기 키우기%>
+            <% //todo 안해도 됨%>
         </a>
     </div>
 </header>

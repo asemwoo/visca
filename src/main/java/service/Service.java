@@ -12,7 +12,7 @@ public class Service {
 		return service;
 	} 
 	public void join(Account account) {
-		dao.join(account);
+		Dao.getInstance().join(account);
 	}
 	public boolean login(String id, String pwd) {
 		// TODO Auto-generated method stub

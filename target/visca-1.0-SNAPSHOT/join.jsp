@@ -123,7 +123,7 @@
 
 <body>
 	<header class="head">
-		<a href="main.jsp"><img src="img/mainblack.jpg"></a>
+		<a href="/"><img src="img/mainblack.jpg"></a>
 		<div>
 			<a href="login.jsp"><button class="head-login">로그인</button></a>
 			<a href="join.jsp"><button class="head-join">회원가입</button></a>
@@ -160,7 +160,7 @@
 	<section class="mt-200">
 		<div class="join-form">
 			<h1>회원가입</h1>
-			<form action="jdbc:mysql://localhost:8080/barca?serverTimezone=UTC" method="post">
+			<form action="join.do" method="post">
 				<fieldset class="fieldset1">
 					<ul>
 						<li class="join">
@@ -170,7 +170,7 @@
 							<input class="input" type="password" name="pwd" placeholder="  비밀번호를 입력하세요">
 						</li>
 						<li class="join">
-							 <input class="input" type="password" name="pwd" placeholder="  비밀번호를 재입력하세요">
+							 <input class="input" type="password" name="pwd-check" placeholder="  비밀번호를 재입력하세요">
 						</li>
 						<li class="join">
 							<input class="input" type="text" name="name" placeholder="  이름을 입력하세요">

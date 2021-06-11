@@ -18,14 +18,14 @@ public class Dao {
 		try
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn= DriverManager.getConnection("jdbc:mysql://localhost:8080/barca?serverTimezone=UTC","root","1234");
+			conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/barca?characterEncoding=UTF-8","root","1234");
 		}catch(Exception e) {
 			System.out.println("MDAO:connect" +e);
 		}
 		return conn;
 	}
-	public void close(Connection conn, PreparedStatement pstmt) 
-	{
+	// INSERT INTO log VALUES(?, ?, sysdate());
+	public void close(Connection conn, PreparedStatement pstmt) {
 		if(pstmt != null)
 		{
 			try {
@@ -54,28 +54,24 @@ public class Dao {
 			close(conn,pstmt);
 		}
 	}
-	public void join(Account account) {  
+	public void join(Account account) {
+		PreparedStatement pstmt;
 		Connection conn = null;
-		PreparedStatement pstmt = null;
 		try
 		{
-			conn = connect();
-			pstmt.executeUpdate();
-			pstmt = conn.prepareStatement("insert into account values(?,?,?,?,?,?);");
+			pstmt = connect().prepareStatement("insert into account values(?,?,?,?,?,?)");
 			pstmt.setString(1, account.getId());
 			pstmt.setString(2, account.getPwd());
 			pstmt.setString(3, account.getName());
 			pstmt.setString(4, account.getMail());
 			pstmt.setString(5, account.getPhone());
 			pstmt.setString(6, account.getBirth());
+			pstmt.executeUpdate();
 
+			close(conn,pstmt);
 		}catch(Exception e)
 		{
 			System.out.print("join error" +e);
-		}
-		finally
-		{
-			close(conn,pstmt);
 		}
 	}
 	public boolean login(String id, String pwd) { 

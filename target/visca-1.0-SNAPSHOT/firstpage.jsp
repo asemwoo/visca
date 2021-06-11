@@ -15,7 +15,7 @@
 <body>
         <header class="icon">
             <div>
-                <a href="main.html">
+                <a href="main.jsp">
                     <img src="img/first.png" width="50%">
                 </a>
             </div>

@@ -90,7 +90,7 @@
         </table>
     </form>
     <div>
-        <a href="board.jsp">
+        <a href="bbs.do">
             <button>게시판</button>
         </a>
     </div>
