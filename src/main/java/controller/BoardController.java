@@ -11,7 +11,12 @@ import vo.BbsDto;
 
 public class BoardController implements Controller {
 
-        protected void doGet (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    @Override
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+
+    protected void doGet (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/board.jsp");
             rd.forward(req, resp);
         }
@@ -41,9 +46,9 @@ public class BoardController implements Controller {
             resp.sendRedirect("bbs.do");
         }
 
-    @Override
-    public void execute(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+  //  @Override
+   // public void execute(HttpServletRequest request, HttpServletResponse response)
+          //  throws ServletException, IOException {
 
-    }
+  //  }
 }

@@ -119,4 +119,83 @@ public class BbsDao {
         }
         return list;
     }
+    public int hitUpdate(String bbsId) {
+        con = getConnect();
+        String sql = "UPDATE bbs SET bbsHit = bbsHit + 1 WHERE bbsId = ?";
+
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, bbsId);
+            result = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(con, pstmt, null);
+        }
+        return result;
+    }
+    public BbsDto selectById(String bbsId) {
+        BbsDto bbsDto = new BbsDto();
+        con = getConnect();
+        String sql = "SELECT * FROM bbs WHERE bbsId = ?";
+
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, bbsId);
+            rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                bbsDto.setBbsId(rs.getInt("bbsid"));
+                bbsDto.setTitle(rs.getString("bbstitle"));
+                bbsDto.setContent(rs.getString("bbscontent"));
+                bbsDto.setDate(rs.getTimestamp("bbsdate"));
+                bbsDto.setHit(rs.getInt("bbshit"));
+                bbsDto.setCategory(rs.getString("bbscategory"));
+                bbsDto.setId(rs.getString("id"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(con, pstmt, rs);
+        }
+        return bbsDto;
+    }
+    public int del(int bbsId) {
+        con = getConnect();
+        String sql = "DELETE FROM bbs1 WHERE bbsId = ?";
+
+        try {
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, bbsId);
+            result = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(con, pstmt, null);
+        }
+        return result;
+    }
+    public int update(BbsDto bbsDto) {
+        con = getConnect();
+        StringBuffer query = new StringBuffer();
+        query.append("UPDATE bbs1 SET bbsTitle = ?, ");
+        query.append("bbsContent = ?, ");
+        query.append("bbsCategory = ? ");
+        query.append("WHERE bbsId = ?");
+
+        try {
+            pstmt = con.prepareStatement(query.toString());
+            pstmt.setString(1, bbsDto.getTitle());
+            pstmt.setString(2, bbsDto.getContent());
+            pstmt.setString(3, bbsDto.getCategory());
+            pstmt.setInt(4, bbsDto.getBbsId());
+            result = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(con, pstmt, null);
+        }
+        return result;
+    }
 }

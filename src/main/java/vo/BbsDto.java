@@ -49,7 +49,6 @@ public class BbsDto {
     public void setId(String id) {
         this.id = id;
     }
-
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
@@ -58,6 +57,5 @@ public class BbsDto {
                 .append(Category).append(", Date=").append(Date).append(", id=").append(id).append("]");
         return builder.toString();
     }
-
 
 }

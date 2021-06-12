@@ -1,5 +1,3 @@
-<!-- bbs.jsp -->
-
 <%@page import="java.sql.Timestamp"%>
 <%@page import="vo.BbsDto"%>
 <%@page import="java.util.List"%>
@@ -93,7 +91,7 @@
         %>
     </table>
     <p>
-        <a href="write.do"><button>글쓰기</button></a><br />
+        <a href="board.do"><button>글쓰기</button></a><br />
         <a href="home.do"><button>HOME</button></a>
     </p>
 </div>
