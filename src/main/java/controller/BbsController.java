@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class BbsController implements Controller {
+public class BbsController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
 
@@ -25,8 +25,5 @@ public class BbsController implements Controller {
         RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/bbs.jsp");
         rd.forward(req, resp);
     }
-    @Override
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    }
 }

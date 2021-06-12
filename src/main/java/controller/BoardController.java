@@ -16,7 +16,6 @@ public class BoardController implements Controller {
             rd.forward(req, resp);
         }
 
-
         protected void doPost (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             req.setCharacterEncoding("UTF-8");
             HttpSession session = req.getSession();
@@ -43,7 +42,8 @@ public class BoardController implements Controller {
         }
 
     @Override
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void execute(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
     }
 }
