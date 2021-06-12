@@ -123,7 +123,7 @@
 
 <body>
 	<header class="head">
-		<a href="/"><img src="img/mainblack.jpg"></a>
+		<a href="/main.jsp"><img src="img/mainblack.jpg"></a>
 		<div>
 			<a href="login.jsp"><button class="head-login">로그인</button></a>
 			<a href="join.jsp"><button class="head-join">회원가입</button></a>

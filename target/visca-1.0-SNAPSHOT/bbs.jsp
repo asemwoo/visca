@@ -59,36 +59,36 @@
             <th width="150px">날짜</th>
             <th width="40px">조회</th>
         </tr>
-        <%
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd, hh:mm:ss");
-            int count = 0;
-            for (BbsDto b : list) {
-                String stDate = "";
-                Timestamp tDate = b.getDate();
-                if (tDate != null) {
-                    stDate = sdf.format(tDate);
-                }
-
-        %>
-        <tr>
-            <td><%=b.getCategory() %></td>
-            <td><%=b.getBbsId() %></td>
-            <td><%=b.getTitle() %></td>
-            <td><%=b.getContent() %></td>
-            <td><%=b.getId() %></td>
-            <td><%=stDate %></td>
-            <td><%=b.getHit() %></td>
-        </tr>
-        <%
-                count++;
-            }
-            if (count == 0) {
+            if (count == 0) {}
         %>
         <tr><td colspan="7">작성한 게시글이 없습니다.</td></tr>
         <%
-            }
+
             System.out.println("현재 게시글 " + count + "개");
         %>
+            <%
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd, hh:mm:ss");
+        int count = 0;
+        for (BbsDto b : list) {
+            String stDate = "";
+            Timestamp tDate = b.getDate();
+            if (tDate != null) {
+                stDate = sdf.format(tDate);
+            }
+            %>
+                <tr>
+                    <td><%=b.getCategory() %></td>
+                    <td><%=b.getBbsId() %></td>
+                    <td><b><a href="bbsview.do?bbsId=<%=b.getBbsId() %> "><%=b.getTitle() %></a></b></td>
+                    <td><%=b.getContent() %></td>
+                    <td><%=b.getId() %></td>
+                    <td><%=stDate %></td>
+                    <td><%=b.getHit() %></td>
+                </tr>
+            <%
+                count ++;
+                }
+            %>
     </table>
     <p>
         <a href="board.do"><button>글쓰기</button></a><br />
