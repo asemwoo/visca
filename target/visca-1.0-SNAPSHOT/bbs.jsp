@@ -1,3 +1,4 @@
+<!-- bbs.jsp -->
 
 <%@page import="java.sql.Timestamp"%>
 <%@page import="vo.BbsDto"%>

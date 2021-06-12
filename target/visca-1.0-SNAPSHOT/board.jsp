@@ -62,7 +62,7 @@
 
 <div class="controller">
     <div id="wriTitle"><b>게시글 작성</b></div>
-    <form action="write.do" method="post">
+    <form action="board.do" method="post">
         <table>
             <tr>
                 <td width="100px">카테고리</td>

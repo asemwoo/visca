@@ -12,7 +12,7 @@ import vo.BbsDto;
 public class BoardController implements Controller {
 
         protected void doGet (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/write.jsp");
+            RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/board.jsp");
             rd.forward(req, resp);
         }
 

@@ -183,7 +183,6 @@
     <div>
       <a href="logout.jsp"> <button class="head-login">로그아웃</button>
         </a>
-      </a>
     </div>
   </a>
 </header>
